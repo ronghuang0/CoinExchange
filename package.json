@@ -1,4 +1,5 @@
 {
+  "name": "CoinExchange",
   "description": "Congregate of different cryptocurrency exchange rates.",
   "repository": {
     "type": "git",
