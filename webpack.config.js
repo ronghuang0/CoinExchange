@@ -1,9 +1,10 @@
-var path = require('path');
+// const path = require('path');
+console.log('woley', __dirname);
 module.exports = {
   entry: './src/index.js',
   output: {
     path: __dirname,
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   module: {
     loaders: [
@@ -12,8 +13,8 @@ module.exports = {
         loader: 'babel-loader',
         query: {
           presets: ['es2015', 'react', 'stage-1'],
-        }
-      }
-    ]
-  }
+        },
+      },
+    ],
+  },
 };
