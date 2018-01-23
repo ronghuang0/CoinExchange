@@ -1,12 +1,12 @@
 /* @flow */
 import React from 'react';
-import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import {
   BrowserRouter as Router,
   Route,
   Link,
 } from 'react-router-dom';
+import type { Match } from 'react-router-dom';
 
 const Home = () => (
   <div>
@@ -21,7 +21,7 @@ const About = () => (
 );
 
 type Props = {
-  match: Object,
+  match: Match,
 };
 
 const Topic = (props: Props) => (
@@ -62,9 +62,6 @@ const Topics = ({ match }) => (
   </div>
 );
 
-Topics.propTypes = {
-  match: PropTypes.string.isRequired,
-};
 const Root = () => (
   <Router>
     <div>
