@@ -1,5 +1,6 @@
 /* @flow */
 import React from 'react';
+import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import {
   BrowserRouter as Router,
@@ -19,9 +20,13 @@ const About = () => (
   </div>
 );
 
-const Topic = ({ match }) => (
+type Props = {
+  match: Object,
+};
+
+const Topic = (props: Props) => (
   <div>
-    <h3>{match.params.topicId}</h3>
+    <h3>{props.match.params.topicId}</h3>
   </div>
 );
 
@@ -56,6 +61,10 @@ const Topics = ({ match }) => (
     />
   </div>
 );
+
+Topics.propTypes = {
+  match: PropTypes.string.isRequired,
+};
 const Root = () => (
   <Router>
     <div>
