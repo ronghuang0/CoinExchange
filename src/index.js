@@ -6,6 +6,7 @@ import {
   Route,
   Link,
 } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.css';
 import Home from './Routes/Home';
 import About from './Routes/About';
 import Topics from './Routes/Topics';
