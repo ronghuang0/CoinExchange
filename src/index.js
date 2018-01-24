@@ -10,8 +10,6 @@ import Home from './Routes/Home';
 import About from './Routes/About';
 import Topics from './Routes/Topics';
 
-debugger;
-console.log('debugger');
 const Root = () => (
   <Router>
     <div>
