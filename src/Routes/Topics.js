@@ -9,6 +9,7 @@ import type { Match } from 'react-router-dom';
 type Props = {
   match: Match,
 };
+
 const Topic = (props: Props) => (
   <div>
     <h3>{props.match.params.topicId}</h3>
@@ -21,12 +22,12 @@ const Topics = (props: Props) => (
     <ul>
       <li>
         <Link to={`${props.match.url}/rendering`}>
-          Rendering with React
+        Rendering with React
         </Link>
       </li>
       <li>
         <Link to={`${props.match.url}/components`}>
-          Components
+        Components
         </Link>
       </li>
       <li>
@@ -46,5 +47,6 @@ const Topics = (props: Props) => (
     />
   </div>
 );
+
 
 export default Topics;
