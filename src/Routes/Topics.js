@@ -5,11 +5,16 @@ import {
   Link,
 } from 'react-router-dom';
 import type { Match } from 'react-router-dom';
-import Topic from './Topic';
 
 type Props = {
   match: Match,
 };
+
+const Topic = (props: Props) => (
+  <div>
+    <h3>{props.match.params.topicId}</h3>
+  </div>
+);
 
 const Topics = (props: Props) => (
   <div>

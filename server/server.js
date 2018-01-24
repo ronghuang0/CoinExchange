@@ -12,9 +12,7 @@ app.use(bodyParser.text());
 
 // this sets up routes for the other files
 app.use('/static', express.static(path.join(__dirname, '/../')));
-console.log('...');
 app.get('/favicon.ico', (req, res) => {
-  console.log('hi?');
   res.sendFile(path.join(__dirname, '/../bulb.png'));
 });
 

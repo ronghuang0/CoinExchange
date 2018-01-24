@@ -10,6 +10,8 @@ import Home from './Routes/Home';
 import About from './Routes/About';
 import Topics from './Routes/Topics';
 
+debugger;
+console.log('debugger');
 const Root = () => (
   <Router>
     <div>
@@ -27,6 +29,7 @@ const Root = () => (
     </div>
   </Router>
 );
+
 const rootEl = document.getElementById('root');
 if (!(rootEl instanceof Element)) {
   throw new Error('invalid type');
