@@ -6,9 +6,9 @@ import {
   Route,
   Link,
 } from 'react-router-dom';
-import Home from './Home';
-import About from './About';
-import Topics from './Topics';
+import Home from './Routes/Home';
+import About from './Routes/About';
+import Topics from './Routes/Topics';
 
 const Root = () => (
   <Router>

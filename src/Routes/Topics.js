@@ -5,7 +5,6 @@ import {
   Link,
 } from 'react-router-dom';
 import type { Match } from 'react-router-dom';
-
 import Topic from './Topic';
 
 type Props = {
