@@ -1,8 +1,5 @@
 /* @flow */
 
-const func = (num: number):number => {
-  const num1 = 1;
-  return num + num1;
-};
+const func = num => num;
 
-func(10);
+func('10');
