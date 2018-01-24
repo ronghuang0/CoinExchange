@@ -16,10 +16,10 @@ module.exports = {
           presets: ['es2015', 'react', 'stage-1', 'flow'],
         },
       },
-      {
-        test: /\.css$/,
-        loaders: ['style-loader', 'css-loader'],
-      },
+      // {
+      //   test: /\.css$/,
+      //   loaders: ['style-loader', 'css-loader'],
+      // },
     ],
   },
 };

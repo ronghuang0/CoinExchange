@@ -6,20 +6,36 @@ import {
   Route,
   Link,
 } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.css';
+// import 'bootstrap/dist/css/bootstrap.css';
+// import 'semantic-ui-css/semantic.min.css';
+import {
+  Breadcrumb,
+  Header,
+  Grid,
+} from 'semantic-ui-react';
 import Home from './Routes/Home';
 import About from './Routes/About';
 import Topics from './Routes/Topics';
 
+const GridExampleContainer = () => (
+  <Grid container columns={1} padded>
+    <Grid.Column>
+      {/* <Header as="h1">First Header</Header> */}
+      <Breadcrumb size="massive">
+        <Breadcrumb.Section link><Link to="/">Home</Link></Breadcrumb.Section>
+        <Breadcrumb.Divider />
+        <Breadcrumb.Section link><Link to="/about">About</Link></Breadcrumb.Section>
+        <Breadcrumb.Divider />
+        <Breadcrumb.Section link><Link to="/topics">Topics</Link></Breadcrumb.Section>
+      </Breadcrumb>
+    </Grid.Column>
+  </Grid>
+);
+
 const Root = () => (
   <Router>
     <div>
-      <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/topics">Topics</Link></li>
-      </ul>
-
+      <GridExampleContainer />
       <hr />
 
       <Route exact path="/" component={Home} />
