@@ -6,28 +6,29 @@ import {
   Route,
   Link,
 } from 'react-router-dom';
-// import 'bootstrap/dist/css/bootstrap.css';
 // import 'semantic-ui-css/semantic.min.css';
 import {
-  Breadcrumb,
-  Header,
+  Menu,
   Grid,
+  Input,
 } from 'semantic-ui-react';
 import Home from './Routes/Home';
 import About from './Routes/About';
 import Topics from './Routes/Topics';
 
 const GridExampleContainer = () => (
-  <Grid container columns={1} padded>
+  <Grid padded='horizontally'>
     <Grid.Column>
-      {/* <Header as="h1">First Header</Header> */}
-      <Breadcrumb size="massive">
-        <Breadcrumb.Section link><Link to="/">Home</Link></Breadcrumb.Section>
-        <Breadcrumb.Divider />
-        <Breadcrumb.Section link><Link to="/about">About</Link></Breadcrumb.Section>
-        <Breadcrumb.Divider />
-        <Breadcrumb.Section link><Link to="/topics">Topics</Link></Breadcrumb.Section>
-      </Breadcrumb>
+      <Menu secondary>
+        <Menu.Item active={false} name='Home' onClick={() => {}}><Link to='/'>Home</Link> </Menu.Item>
+        <Menu.Item active={false} name='About' onClick={() => {}}><Link to='/about'>About</Link></Menu.Item>
+        <Menu.Item active name='Topics'><Link to='/topics' onClick={() => {}}>Topics</Link></Menu.Item>
+        <Menu.Menu position='right'>
+          <Menu.Item>
+            <Input icon='search' placeholder='Search...' />
+          </Menu.Item>
+        </Menu.Menu>
+      </Menu>
     </Grid.Column>
   </Grid>
 );
@@ -36,11 +37,9 @@ const Root = () => (
   <Router>
     <div>
       <GridExampleContainer />
-      <hr />
-
-      <Route exact path="/" component={Home} />
-      <Route path="/about" component={About} />
-      <Route path="/topics" component={Topics} />
+      <Route exact path='/' component={Home} />
+      <Route path='/about' component={About} />
+      <Route path='/topics' component={Topics} />
     </div>
   </Router>
 );
