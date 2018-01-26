@@ -2,8 +2,9 @@ import React from 'react';
 import {
   Route,
   Link,
-} from 'react-router';
-import type { Match } from 'react-router-dom';
+} from 'react-router-dom';
+import { Menu } from 'semantic-ui-react';
+// import type { Match } from 'react-router-dom';
 
 type NavComponentProps = {
   label: string,
@@ -11,21 +12,18 @@ type NavComponentProps = {
   activeOnlyWhenExact: boolean,
 };
 
-type NavComponentChildProps = {
-  match: Match,
-};
 
 const NavComponent = (props: NavComponentProps) => (
   <Route
     path={props.to}
     exact={props.activeOnlyWhenExact}
   >
-    (props:NavComponentChildProps) => (
-    <div>
-      {NavComponentChildProps.match ? '> ' : ''}<Link to={to}>{props.label}</Link>
-    </div>
-    )
+    {({ match }) => {
+      return (
+        <Menu.Item active={match} name='About' onClick={() => {}}><Link to='/about'>About</Link></Menu.Item>
+      );
+    }}
   </Route>
-)
+);
 
 export default NavComponent;

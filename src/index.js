@@ -15,11 +15,13 @@ import {
 import Home from './Routes/Home';
 import About from './Routes/About';
 import Topics from './Routes/Topics';
+import NavComponent from './NavComponent';
 
 const GridExampleContainer = () => (
   <Grid padded='horizontally'>
     <Grid.Column>
       <Menu secondary>
+        <NavComponent label='test' to='/about' />
         <Menu.Item active={false} name='Home' onClick={() => {}}><Link to='/'>Home</Link> </Menu.Item>
         <Menu.Item active={false} name='About' onClick={() => {}}><Link to='/about'>About</Link></Menu.Item>
         <Menu.Item active name='Topics'><Link to='/topics' onClick={() => {}}>Topics</Link></Menu.Item>
