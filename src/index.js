@@ -12,17 +12,17 @@ import {
   Input,
 } from 'semantic-ui-react';
 import Home from './Routes/Home';
-import About from './Routes/About';
-import Topics from './Routes/Topics';
+import Page1 from './Routes/Page1';
+import Page2 from './Routes/Page2';
 import NavMenuComponent from './NavMenuComponent';
 
 const NavMenu = () => (
   <Grid padded='horizontally'>
     <Grid.Column>
-      <Menu secondary>
+      <Menu secondary pointing>
         <NavMenuComponent label='Home' to='/' />
-        <NavMenuComponent label='About' to='/about' />
-        <NavMenuComponent label='Topics' to='/topics' />
+        <NavMenuComponent label='Page1' to='/page1' />
+        <NavMenuComponent label='Page2' to='/page2' />
         <Menu.Menu position='right'>
           <Menu.Item>
             <Input icon='search' placeholder='Search...' />
@@ -38,8 +38,8 @@ const Root = () => (
     <div>
       <NavMenu />
       <Route exact path='/' component={Home} />
-      <Route path='/about' component={About} />
-      <Route path='/topics' component={Topics} />
+      <Route path='/page1' component={Page1} />
+      <Route path='/page2' component={Page2} />
     </div>
   </Router>
 );
