@@ -14,6 +14,7 @@
         "specialLink": [ "to", "hrefLeft", "hrefRight" ],
         "aspects": [ "noHref", "invalidHref", "preferButton" ]
     }],
-    jsx-quotes: ["error", "prefer-single"]
+    "jsx-quotes": ["error", "prefer-single"],
+    "react/no-unused-prop-types": [0]
   }
 }

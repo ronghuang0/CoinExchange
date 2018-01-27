@@ -3,29 +3,32 @@ import {
   Route,
 } from 'react-router-dom';
 import { Menu } from 'semantic-ui-react';
-// import type { Match } from 'react-router-dom';
+import type { Match, RouterHistory } from 'react-router-dom';
 
 type NavComponentProps = {
   label: string,
   to: string,
-  activeOnlyWhenExact: boolean,
+  exact: boolean,
 };
 
+type InnerProps = {
+  match: Match,
+  history: RouterHistory,
+};
 
-const NavMenuComponent = (props: NavComponentProps) => (
+const NavMenuComponent = ({ label, to, exact }: NavComponentProps) => (
   <Route
-    path={props.to}
-    exact={props.activeOnlyWhenExact}
+    path={to}
+    exact={exact}
   >
-    {({ match, history }) => (
+    {({ match, history }: InnerProps) => (
       <Menu.Item
         active={match && match.isExact}
-        name={props.label}
-        onClick={() => history.push(props.to)}
+        name={label}
+        onClick={() => history.push(to)}
       >
-        {props.label}
-      </Menu.Item>
-    )};
+        {label}
+      </Menu.Item>)}
   </Route>
 );
 
