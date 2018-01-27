@@ -1,10 +1,11 @@
 import React from 'react';
-import { Grid } from 'semantic-ui-react';
+import { Grid, Header } from 'semantic-ui-react';
 import SortableTable from './SortableTable';
 
 const Overview = () => (
   <Grid padded='horizontally'>
     <Grid.Column>
+      <Header textAlign='center' as='h1'>Cryptocurrency Market Overview</Header>
       <SortableTable />
     </Grid.Column>
   </Grid>

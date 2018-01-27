@@ -19,7 +19,7 @@ import NavMenuComponent from './NavMenuComponent';
 const NavMenu = () => (
   <Grid padded='horizontally'>
     <Grid.Column>
-      <Menu secondary pointing>
+      <Menu secondary >
         <NavMenuComponent label='Home' to='/' />
         <NavMenuComponent label='Page1' to='/page1' />
         <NavMenuComponent label='Page2' to='/page2' />
