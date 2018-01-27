@@ -21,10 +21,11 @@ const GridExampleContainer = () => (
   <Grid padded='horizontally'>
     <Grid.Column>
       <Menu secondary>
-        <NavComponent label='test' to='/about' />
-        <Menu.Item active={false} name='Home' onClick={() => {}}><Link to='/'>Home</Link> </Menu.Item>
-        <Menu.Item active={false} name='About' onClick={() => {}}><Link to='/about'>About</Link></Menu.Item>
-        <Menu.Item active name='Topics'><Link to='/topics' onClick={() => {}}>Topics</Link></Menu.Item>
+        <NavComponent label='Home' to='/' />
+        <NavComponent label='About' to='/about' />
+        <NavComponent label='Topics' to='/topics' />
+
+
         <Menu.Menu position='right'>
           <Menu.Item>
             <Input icon='search' placeholder='Search...' />
