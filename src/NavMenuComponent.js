@@ -12,17 +12,21 @@ type NavComponentProps = {
 };
 
 
-const NavComponent = (props: NavComponentProps) => (
+const NavMenuComponent = (props: NavComponentProps) => (
   <Route
     path={props.to}
     exact={props.activeOnlyWhenExact}
   >
-    {({ match, history }) => {
-      return (
-        <Menu.Item active={match && match.isExact} name={props.label} onClick={() => history.push(props.to)}>{props.label}</Menu.Item>
-      );
-    }}
+    {({ match, history }) => (
+      <Menu.Item
+        active={match && match.isExact}
+        name={props.label}
+        onClick={() => history.push(props.to)}
+      >
+        {props.label}
+      </Menu.Item>
+    )};
   </Route>
 );
 
-export default NavComponent;
+export default NavMenuComponent;

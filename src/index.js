@@ -4,7 +4,6 @@ import ReactDOM from 'react-dom';
 import {
   BrowserRouter as Router,
   Route,
-  Link,
 } from 'react-router-dom';
 // import 'semantic-ui-css/semantic.min.css';
 import {
@@ -15,17 +14,15 @@ import {
 import Home from './Routes/Home';
 import About from './Routes/About';
 import Topics from './Routes/Topics';
-import NavComponent from './NavComponent';
+import NavMenuComponent from './NavMenuComponent';
 
-const GridExampleContainer = () => (
+const NavMenu = () => (
   <Grid padded='horizontally'>
     <Grid.Column>
       <Menu secondary>
-        <NavComponent label='Home' to='/' />
-        <NavComponent label='About' to='/about' />
-        <NavComponent label='Topics' to='/topics' />
-
-
+        <NavMenuComponent label='Home' to='/' />
+        <NavMenuComponent label='About' to='/about' />
+        <NavMenuComponent label='Topics' to='/topics' />
         <Menu.Menu position='right'>
           <Menu.Item>
             <Input icon='search' placeholder='Search...' />
@@ -39,7 +36,7 @@ const GridExampleContainer = () => (
 const Root = () => (
   <Router>
     <div>
-      <GridExampleContainer />
+      <NavMenu />
       <Route exact path='/' component={Home} />
       <Route path='/about' component={About} />
       <Route path='/topics' component={Topics} />
