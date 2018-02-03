@@ -7,7 +7,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "start": "node server/server.js",
+    "start": "node server/server.js"
   },
   "dependencies": {
     "babel-core": "^6.26.0",
@@ -24,6 +24,7 @@
     "eslint-plugin-react": "^7.5.1",
     "express": "^4.16.2",
     "lodash": "^4.17.4",
+    "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-router": "^4.2.0",

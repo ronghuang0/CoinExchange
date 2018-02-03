@@ -1,22 +1,25 @@
-// @flow
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   Route,
   Link,
 } from 'react-router-dom';
-import type { Match } from 'react-router-dom';
 
-type Props = {
-  match: Match,
-};
-
-const SubPage = ({ match }: Props) => (
+const SubPage = ({ match }) => (
   <div>
     <h3>{match.params.topicId}</h3>
   </div>
 );
 
-const Page2 = ({ match }: Props) => (
+SubPage.propTypes = {
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      id: PropTypes.node,
+    }).isRequired,
+  }).isRequired,
+};
+
+const Page2 = ({ match }) => (
   <div>
     <h2>Topics</h2>
     <ul>
@@ -41,5 +44,8 @@ const Page2 = ({ match }: Props) => (
   </div>
 );
 
+Page2.propTypes = {
+  match: PropTypes.shape({ url: PropTypes.string.isRequired }).isRequired,
+};
 
 export default Page2;

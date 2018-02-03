@@ -5,7 +5,7 @@
     "browser": true,
     "node": true,
     "es6": true,
-    "mocha": true
+    "jest": true
   },
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
@@ -15,6 +15,6 @@
         "aspects": [ "noHref", "invalidHref", "preferButton" ]
     }],
     "jsx-quotes": ["error", "prefer-single"],
-    "react/no-unused-prop-types": [0]
+    'react/require-default-props': [0],
   }
 }

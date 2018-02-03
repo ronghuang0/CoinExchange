@@ -1,27 +1,16 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   Route,
 } from 'react-router-dom';
 import { Menu } from 'semantic-ui-react';
-import type { Match, RouterHistory } from 'react-router-dom';
 
-type NavComponentProps = {
-  label: string,
-  to: string,
-  exact: boolean,
-};
-
-type InnerProps = {
-  match: Match,
-  history: RouterHistory,
-};
-
-const NavMenuComponent = ({ label, to, exact }: NavComponentProps) => (
+const NavMenuComponent = ({ label, to, exact }) => (
   <Route
     path={to}
     exact={exact}
   >
-    {({ match, history }: InnerProps) => (
+    {({ match, history }) => (
       <Menu.Item
         active={match && match.isExact}
         name={label}
@@ -31,5 +20,11 @@ const NavMenuComponent = ({ label, to, exact }: NavComponentProps) => (
       </Menu.Item>)}
   </Route>
 );
+
+NavMenuComponent.propTypes = {
+  label: PropTypes.string,
+  to: PropTypes.string,
+  exact: PropTypes.bool,
+};
 
 export default NavMenuComponent;
