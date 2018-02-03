@@ -8,7 +8,6 @@
   "license": "MIT",
   "scripts": {
     "start": "node server/server.js",
-    "flow": "flow"
   },
   "dependencies": {
     "babel-core": "^6.26.0",
@@ -18,7 +17,6 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
     "body-parser": "^1.18.2",
-    "es6-promise": "^4.2.2",
     "eslint": "^4.16.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.8.0",
@@ -36,9 +34,7 @@
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-flow": "^6.23.0",
     "css-loader": "^0.28.9",
-    "flow-bin": "^0.63.1",
     "style-loader": "^0.19.1"
   }
 }
