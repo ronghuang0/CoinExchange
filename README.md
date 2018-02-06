@@ -1,6 +1,6 @@
 # CoinExchange
 This is a bit of a misnomer since I envision this to be a collection of cryptocurrency rates
-from different exchanges rather than an actual exchange. 
+from different exchanges rather than an actual exchange.
 https://...
 
 
@@ -18,6 +18,9 @@ simply doing the requests in the root component and passing the data through pro
 is fetched, I will distribute the fetching throughout different component points. If this evolves
 enough, then I will experiment with MobX since I have been very curious to see the differences
 from Redux.
+
+Currently using react-router, but deciding if I want to go with an action based router that works
+better with Redux like redux-first-router.
 
 #Todo
 internationalization
