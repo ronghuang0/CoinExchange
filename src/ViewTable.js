@@ -28,13 +28,15 @@ export default class ViewTable extends Component {
         <Table.Body>
           {_.map(data, ({
               name,
-              price,
+              price_usd,
+              market_cap_usd,
+              '24h_volume_usd': volume,
             }) => (
               <Table.Row key={name}>
                 <Table.Cell>{name}</Table.Cell>
-                <Table.Cell>{price}</Table.Cell>
-                <Table.Cell>{0}</Table.Cell>
-                <Table.Cell>{0}</Table.Cell>
+                <Table.Cell>{price_usd}</Table.Cell>
+                <Table.Cell>{market_cap_usd}</Table.Cell>
+                <Table.Cell>{volume}</Table.Cell>
 
               </Table.Row>
             ))}
