@@ -6,7 +6,6 @@ const Overview = ({ data }) => (
   <Grid padded='horizontally'>
     <Grid.Column>
       <Header textAlign='center' as='h1'>Cryptocurrency Market Overview</Header>
-      <div> Average: </div>
       {/* <SortableTable data={data} /> */}
       <ViewTable data={data} />
     </Grid.Column>
