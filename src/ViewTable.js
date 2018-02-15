@@ -6,7 +6,6 @@ import { Table } from 'semantic-ui-react';
 export default class ViewTable extends Component {
   render() {
     const { data } = this.props;
-    console.log('woley', data);
     return (
       <Table unstackable sortable celled fixed>
         <Table.Header>
