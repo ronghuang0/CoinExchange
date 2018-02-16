@@ -7,7 +7,7 @@ export default class ViewTable extends Component {
   render() {
     const { data } = this.props;
     return (
-      <Table unstackable sortable celled fixed>
+      <Table unstackable sortable celled>
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell>
