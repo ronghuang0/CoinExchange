@@ -5,24 +5,24 @@ import { Table } from 'semantic-ui-react';
 
 export default class ViewTable extends Component {
   render() {
-    const { data } = this.props;
+    const { data, column, direction, onClick } = this.props;
     return (
       <Table unstackable sortable celled>
         <Table.Header>
           <Table.Row>
-            <Table.HeaderCell>
+            <Table.HeaderCell sorted={column === 'name' ? direction : null} onClick={onClick('name')}>
               Name
             </Table.HeaderCell>
-            <Table.HeaderCell>
+            <Table.HeaderCell sorted={column === 'price_usd' ? direction : null} onClick={onClick('price_usd')}>
               Price
             </Table.HeaderCell>
-            <Table.HeaderCell>
+            <Table.HeaderCell sorted={column === 'percent_change_24h' ? direction : null} onClick={onClick('percent_change_24h')}>
               Change (24h)
             </Table.HeaderCell>
-            <Table.HeaderCell>
+            <Table.HeaderCell sorted={column === 'market_cap_usd' ? direction : null} onClick={onClick('market_cap_usd')}>
               Market Cap
             </Table.HeaderCell>
-            <Table.HeaderCell>
+            <Table.HeaderCell sorted={column === '24h_volume_usd' ? direction : null} onClick={onClick('24h_volume_usd')}>
               Volume (24h)
             </Table.HeaderCell>
           </Table.Row>
@@ -30,8 +30,8 @@ export default class ViewTable extends Component {
         <Table.Body>
           {_.map(data, ({
               name,
-              percent_change_24h,
               price_usd,
+              percent_change_24h,
               market_cap_usd,
               '24h_volume_usd': volume,
             }) => (

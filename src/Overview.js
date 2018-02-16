@@ -3,12 +3,21 @@ import PropTypes from 'prop-types';
 import { Grid, Header } from 'semantic-ui-react';
 import ViewTable from './ViewTable';
 
-const Overview = ({ data }) => (
+const Overview = ({
+  data,
+  column,
+  direction,
+  onClick,
+}) => (
   <Grid padded='horizontally'>
     <Grid.Column>
       <Header textAlign='center' as='h1'>Cryptocurrency Market Overview</Header>
-      {/* <SortableTable data={data} /> */}
-      <ViewTable data={data} />
+      <ViewTable
+        data={data}
+        column={column}
+        direction={direction}
+        onClick={onClick}
+      />
     </Grid.Column>
   </Grid>
 );
