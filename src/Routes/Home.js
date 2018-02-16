@@ -18,14 +18,13 @@ export default class Home extends Component {
       });
   }
 
-  // Seems like intermittently doesn't work for negative numbers
   handleSort = clickedColumn => () => {
     const { column, data, direction } = this.state;
 
     if (column !== clickedColumn) {
       const sortFunction = clickedColumn === 'name' ?
         obj => obj.name :
-        obj => parseInt(obj[clickedColumn], 10);
+        obj => parseFloat(obj[clickedColumn], 10);
       this.setState({
         column: clickedColumn,
         data: _.sortBy(data, sortFunction),
