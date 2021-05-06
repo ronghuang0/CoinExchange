@@ -42,7 +42,7 @@
     "express": "^4.16.2",
     "jest": "^22.1.4",
     "jest-css-modules": "^1.1.0",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.21",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
